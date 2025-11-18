@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Purdue ACL Awareness</title>
+  <meta name="description" content="Purdue-themed site for ACL tear awareness, prevention warmups & workouts, and pain evaluation." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#000000;
+      --card:#1a1a1a;
+      --muted:#d6d6d6;
+      --accent:#b5a76c;
+      --accent-2:#ffd662;
+      --glass:rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#000000 0%, #111111 100%);color:#fff}
+    header{display:flex;align-items:center;gap:18px;padding:18px;background:#111}
+    .mark{width:48px;height:48px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-weight:800;color:#000}
+    nav{margin-left:auto;display:flex;gap:8px}
+    nav a{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:10px 14px;border-radius:10px;color:var(--muted);text-decoration:none;cursor:pointer}
+    nav a.active{background:var(--accent);color:#000;border:1px solid var(--accent-2)}
+    main{max-width:1100px;margin:28px auto;padding:18px;display:grid;gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    h1,h2,h3{margin:0}
+    p.lead{color:var(--muted);margin-top:8px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    footer{max-width:1100px;margin:14px auto;color:var(--muted);padding:10px}
+    .small{font-size:13px;color:var(--muted)}
+    .btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+    .cta{background:var(--accent-2);color:#000}
+    label{display:block;margin-top:8px;margin-bottom:6px}
+    select,input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit;width:100%}
+    .muted{color:var(--muted)}
+    .list{display:flex;flex-direction:column;gap:10px}
+    @media(max-width:880px){.grid-2{grid-template-columns:1fr}.desktop-only{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="mark">PU</div>
+      <div>
+        <div style="font-weight:700">Purdue ACL Awareness</div>
+        <div class="small muted">Education • Prevention • Recovery</div>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a data-target="home" class="active">Home</a>
+      <a data-target="acl">ACL Awareness</a>
+      <a data-target="warmup">Warmup & Workout</a>
+      <a data-target="pain">Pain Advisor</a>
+      <a data-target="resources">Resources</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <!-- HOME -->
+    <section id="home" class="card" role="region" aria-labelledby="home-title">
+      <h1 id="home-title">Welcome to Purdue ACL Awareness</h1>
+      <p class="lead">A Purdue-themed hub to learn about ACL tears, follow preventive warmups, and evaluate knee symptoms.</p>
+      <div style="margin-top:12px" class="grid-2">
+        <div class="card">
+          <h2>Quick Links</h2>
+          <div style="margin-top:8px" class="list">
+            <a href="#acl" class="muted">• Learn about ACL tear risks & awareness</a>
+            <a href="#warmup" class="muted">• Do preventive warmup & strength exercises</a>
+            <a href="#pain" class="muted">• Evaluate symptoms & get advice</a>
+            <a href="#resources" class="muted">• Find professional guidance</a>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Printable Handouts</h2>
+          <p class="muted">Generate printable PDFs for awareness, warmup, and pain prevention guides. Use 'Print PDF' buttons on each page.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACL Awareness -->
+    <section id="acl" class="card" role="region" aria-labelledby="acl-title" style="display:none">
+      <h1 id="acl-title">ACL Tear Awareness</h1>
+      <p class="muted">Understand the risk, signs, and prevention methods for ACL injuries. Awareness is key to protecting your knees.</p>
+      <div style="margin-top:12px" class="grid-2">
+        <div class="card">
+          <h3>Risk Factors & Causes</h3>
+          <ul class="muted">
+            <li>Sudden deceleration or pivoting movements in sports</li>
+            <li>Poor landing technique or imbalance</li>
+            <li>Previous knee injuries or muscular weakness</li>
+            <li>Gender-specific risk: higher in female athletes</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Signs & Prevention</h3>
+          <ul class="muted">
+            <li>Pop sound or sudden pain during activity</li>
+            <li>Immediate swelling or instability</li>
+            <li>Strengthening & dynamic stability exercises reduce risk</li>
+            <li>Education on proper landing and cutting techniques</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+        <button class="btn cta" onclick="printSection('acl')">Print PDF — ACL Awareness</button>
+      </div>
+    </section>
+
+    <!-- Warmup & Workout -->
+    <section id="warmup" class="card" role="region" aria-labelledby="warm-title" style="display:none">
+      <h1 id="warm-title">Warmup & Strength Routine</h1>
+      <p class="muted">Prevent ACL injuries by performing these warmups and strengthening exercises.</p>
+      <div style="margin-top:12px" class="grid-2">
+        <div class="card">
+          <h3>Dynamic Warmup</h3>
+          <ol class="muted">
+            <li>Leg swings — front-to-back and side-to-side: 10 each leg</li>
+            <li>Walking lunges with a twist: 10 each side</li>
+            <li>Glute bridges: 10–15 reps</li>
+            <li>Light jogging or skipping: 60 seconds</li>
+            <li>High knees or agility ladder drills: 30–45 seconds</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Strength & Control</h3>
+          <ol class="muted">
+            <li>Single-leg Romanian deadlift — 8–12 reps per leg</li>
+            <li>Bulgarian split squat — 8–10 reps per leg</li>
+            <li>Side-lying clamshells — 12–20 reps per side</li>
+            <li>Nordic hamstring curls — 6–10 reps</li>
+            <li>Box drop landings — 5–8 reps, focus on knee alignment</li>
+          </ol>
+        </div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+        <button class="btn cta" onclick="printSection('warmup')">Print PDF — Warmup</button>
+      </div>
+    </section>
+
+    <!-- Pain Advisor -->
+    <section id="pain" class="card" role="region" aria-labelledby="pain-title" style="display:none">
+      <h1 id="pain-title">Pain Advisor</h1>
+      <p class="muted">Select a symptom to get targeted exercise suggestions and precautions to help prevent ACL injury.</p>
+      <div class="card">
+        <form id="painForm" onsubmit="return false;">
+          <label for="symptom">Select main symptom</label>
+          <select id="symptom">
+            <option value="instability">Instability / giving way</option>
+            <option value="swelling">Swelling after activity</option>
+            <option value="sharp">Sharp pain during pivoting or landing</option>
+            <option value="medial">Inner knee pain</option>
+            <option value="lateral">Outer knee pain</option>
+            <option value="posterior">Back of knee pain</option>
+            <option value="soreness">General soreness / tightness</option>
+            <option value="postop">Post-surgery guidance</option>
+          </select>
+
+          <label for="notes">Optional details</label>
+          <textarea id="notes" rows="3" placeholder="e.g. after soccer practice"></textarea>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <button class="btn cta" id="adviseBtn">Get suggestions</button>
+            <button class="btn" onclick="printSection('pain')">Print PDF — Advice</button>
+          </div>
+        </form>
+        <div style="margin-top:12px" class="card" id="adviceBox"></div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="card" role="region" aria-labelledby="res-title" style="display:none">
+      <h1 id="res-title">Resources</h1>
+      <p class="muted">Find professionals and educational materials to continue ACL tear awareness and prevention.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center">
+      <div class="small">Purdue ACL Awareness — Educational purposes only, not medical advice.</div>
+    </div>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('main section');
+    function showSection(target){
+      sections.forEach(s=>s.style.display='none');
+      sections.forEach(s=>{if(s.id===target)s.style.display='block';});
+      links.forEach(a=>a.classList.toggle('active',a.getAttribute('data-target')===target));
+      history.replaceState(null,'',`#${target}`);
+    }
+    links.forEach(link=>link.addEventListener('click',()=>showSection(link.getAttribute('data-target'))));
+    showSection(location.hash.replace('#','')||'home');
+
+    const adviceBox=document.getElementById('adviceBox');
+    const common={instability:{title:'Instability / giving way',summary:'Work on dynamic stability.',exercises:[{name:'Single-leg balance',reps:'30–60s',desc:'Stand on one leg; progress to unstable surface.'}],precautions:['Seek evaluation if acute injury.']},swelling:{title:'Swelling after activity',summary:'Manage inflammation.',exercises:[{name:'Quad sets',reps:'10–20',desc:'Tighten front thigh.'}],precautions:['Significant swelling needs review.']},sharp:{title:'Sharp pain during pivoting',summary:'Stop painful activity.',exercises:[{name:'Pain-free walking',reps:'As tolerated',desc:'Focus on normal gait.'}],precautions:['Avoid pivoting/cutting until cleared.']},medial:{title:'Inner knee pain',summary:'May be medial structures.',exercises:[{name:'TKE (band)',reps:'10–15',desc:'Terminal knee extension.'}],precautions:['Twist injuries require assessment.']},lateral:{title:'Outer knee pain',summary:'May be lateral structures.',exercises:[{name:'Clamshells',reps:'15–20',desc:'Glute med activation.'}],precautions:['Locking pain needs clinician.']},posterior:{title:'Back of knee pain',summary:'Hamstring or popliteal region.',exercises:[{name:'Nordic hamstring',reps:'6–8',desc:'Assisted.'}],precautions:['Vascular symptoms need urgent care.']},soreness:{title:'Soreness / tightness',summary:'Manage load and mobility.',exercises:[{name:'Dynamic warmup',reps:'6–10 min',desc:'Leg swings, lunges.'}],precautions:['Worsening pain should be checked.']},postop:{title:'Post-op guidance',summary:'Follow professional protocol.',exercises:[{name:'Heel slides',reps:'10–20',desc:'Regain range gently.'}],precautions:['Follow clinician instructions.']}};
+    function renderAdvice(a,notes){let html=`<h3>${a.title}</h3><p class='muted'>${a.summary}</p><h4>Exercises</h4><ul>`;a.exercises.forEach(e=>html+=`<li><strong>${e.name}</strong> — <em>${e.reps}</em><div class='small muted'>${e.desc}</div></li>`);html+='</ul><h4>Precautions</h4><ul class=\'muted\'>';a.precautions.forEach(p=>html+=`<li>${p}</li>`);html+='</ul>';if(notes)html+=`<div class='small muted'><strong>Notes:</strong> ${notes}</div>`;return html;}
+    document.getElementById('adviseBtn').addEventListener('click',()=>{
+      const s=document.getElementById('symptom').value;
+      const notes=document.getElementById('notes').value.trim();
+      const a=common[s]||common.soreness;
+      adviceBox.innerHTML=renderAdvice(a,notes);
+    });
+    adviceBox.innerHTML=renderAdvice(common.soreness,'');
+
+    async function printSection(id){
+      const el=document.getElementById(id);
+      if(!el)return alert('Section not found');
+      const clone=el.cloneNode(true); document.body.appendChild(clone); clone.style.width='780px';
+      try{
+        const canvas=await html2canvas(el,{scale:2});
+        const imgData=canvas.toDataURL('image/png');
+        const pdf=new window.jspdf.jsPDF({orientation:'portrait',unit:'pt',format:'a4'});
+        const imgProps=pdf.getImageProperties(imgData);
+        const pdfWidth=pdf.internal.pageSize.getWidth();
+        const pdfHeight=(imgProps.height*pdfWidth)/imgProps.width;
+        pdf.addImage(imgData,'PNG',20,20,pdfWidth-40,pdfHeight-40);
+        pdf.save(`${id}-handout.pdf`);
+      }catch(err){alert('PDF generation failed: '+err.message);}finally{clone.remove();}
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
