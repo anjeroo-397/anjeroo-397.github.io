@@ -1,119 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Purdue ACL Awareness</title>
-  <meta name="description" content="Purdue-themed site for ACL tear awareness, prevention warmups & workouts, and pain evaluation." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#000000;
-      --card:#1a1a1a;
-      --muted:#d6d6d6;
-      --accent:#b5a76c;
-      --accent-2:#ffd662;
-      --glass:rgba(255,255,255,0.03);
-      --radius:14px;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#000000 0%, #111111 100%);color:#fff}
-    header{display:flex;align-items:center;gap:18px;padding:18px;background:#111}
-    .mark{width:48px;height:48px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-weight:800;color:#000}
-    nav{margin-left:auto;display:flex;gap:8px}
-    nav a{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:10px 14px;border-radius:10px;color:var(--muted);text-decoration:none;cursor:pointer}
-    nav a.active{background:var(--accent);color:#000;border:1px solid var(--accent-2)}
-    main{max-width:1100px;margin:28px auto;padding:18px;display:grid;gap:18px}
-    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
-    h1,h2,h3{margin:0}
-    p.lead{color:var(--muted);margin-top:8px}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    footer{max-width:1100px;margin:14px auto;color:var(--muted);padding:10px}
-    .small{font-size:13px;color:var(--muted)}
-    .btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
-    .cta{background:var(--accent-2);color:#000}
-    label{display:block;margin-top:8px;margin-bottom:6px}
-    select,input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit;width:100%}
-    .muted{color:var(--muted)}
-    .list{display:flex;flex-direction:column;gap:10px}
-    @media(max-width:880px){.grid-2{grid-template-columns:1fr}.desktop-only{display:none}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Purdue ACL Awareness</title>
+<meta name="description" content="Purdue-themed site for ACL tear awareness, prevention warmups & workouts, and pain evaluation." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#000000;
+--card:#1a1a1a;
+--muted:#d6d6d6;
+--accent:#b5a76c;
+--accent-2:#ffd662;
+--glass:rgba(255,255,255,0.03);
+--radius:14px;
+font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,#000000 0%, #111111 100%);color:#fff}
+header{display:flex;align-items:center;gap:18px;padding:18px;background:#111}
+.mark{width:48px;height:48px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-weight:800;color:#000}
+nav{margin-left:auto;display:flex;gap:8px}
+nav a{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:10px 14px;border-radius:10px;color:var(--muted);text-decoration:none;cursor:pointer}
+nav a.active{background:var(--accent);color:#000;border:1px solid var(--accent-2)}
+main{max-width:1100px;margin:28px auto;padding:18px;display:grid;gap:18px}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+h1,h2,h3{margin:0}
+p.lead{color:var(--muted);margin-top:8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+footer{max-width:1100px;margin:14px auto;color:var(--muted);padding:10px}
+.small{font-size:13px;color:var(--muted)}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+.cta{background:var(--accent-2);color:#000}
+label{display:block;margin-top:8px;margin-bottom:6px}
+select,input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit;width:100%}
+.muted{color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:10px}
+@media(max-width:880px){.grid-2{grid-template-columns:1fr}.desktop-only{display:none}}
+</style>
 </head>
 <body>
-  <header>
-    <div style="display:flex;align-items:center;gap:12px">
-      <div class="mark">PU</div>
-      <div>
-        <div style="font-weight:700">Purdue ACL Awareness</div>
-        <div class="small muted">Education • Prevention • Recovery</div>
-      </div>
-    </div>
-    <nav aria-label="Main navigation">
-      <a data-target="home" class="active">Home</a>
-      <a data-target="acl">ACL Awareness</a>
-      <a data-target="warmup">Warmup & Workout</a>
-      <a data-target="pain">Pain Advisor</a>
-      <a data-target="resources">Resources</a>
-    </nav>
-  </header>
+<header>
+<div style="display:flex;align-items:center;gap:12px">
+<div class="mark">PU</div>
+<div>
+<div style="font-weight:700">Purdue ACL Awareness</div>
+<div class="small muted">Education • Prevention • Recovery</div>
+</div>
+</div>
+<nav aria-label="Main navigation">
+<a data-target="home" class="active">Home</a>
+<a data-target="acl">ACL Awareness</a>
+<a data-target="warmup">Warmup & Workout</a>
+<a data-target="pain">Pain Advisor</a>
+<a data-target="resources">Resources</a>
+</nav>
+</header>
 
-  <main id="app">
-    <!-- HOME -->
-    <section id="home" class="card" role="region" aria-labelledby="home-title">
-      <h1 id="home-title">Welcome to Purdue ACL Awareness</h1>
-      <p class="lead">A Purdue-themed hub to learn about ACL tears, follow preventive warmups, and evaluate knee symptoms.</p>
-      <div style="margin-top:12px" class="grid-2">
-        <div class="card">
-          <h2>Quick Links</h2>
-          <div style="margin-top:8px" class="list">
-            <p> ACL tears have become one of the most common and frustrating 
-              injuries for athletes and active people, yet most of us don’t realize how 
-              quickly they can happen or how long the recovery really is. One wrong landing, 
-              one quick change of direction, or even a simple misstep can lead to months of pain, 
-              rehab, and setbacks. Raising awareness matters because so many ACL injuries are 
-              avoidable with proper strength, technique, and understanding of how the knee actually 
-              works. The more people recognize the risks, the early warning signs, and the importance 
-              of taking care of their bodies, the fewer athletes will find themselves unexpectedly sidelined. 
-              ACL awareness isn’t about scaring anyone it’s about helping people stay confident, healthy, and 
-              capable of doing what they love without losing seasons or confidence to an injury they never saw coming.</p>
-          </div>
-        </div>
-        <div class="card">
-          <h2>Printable Handouts</h2>
-          <p class="muted">Generate printable PDFs for awareness, warmup, and pain prevention guides. Use 'Print PDF' buttons on each page.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- ACL Awareness -->
-    <section id="acl" class="card" role="region" aria-labelledby="acl-title" style="display:none">
-      <h1 id="acl-title">ACL Tear Awareness</h1>
-      <p class="muted">Understand the risk, signs, and prevention methods for ACL injuries. Awareness is key to protecting your knees.</p>
-      <div style="margin-top:12px" class="grid-2">
-        <div class="card">
-          <h3>Risk Factors & Causes</h3>
-          <ul class="muted">
-            <li>Sudden deceleration or pivoting movements in sports</li>
-            <li>Poor landing technique or imbalance</li>
-            <li>Previous knee injuries or muscular weakness</li>
-            <li>Gender-specific risk: higher in female athletes</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Signs & Prevention</h3>
-          <ul class="muted">
-            <li>Pop sound or sudden pain during activity</li>
-            <li>Immediate swelling or instability</li>
-            <li>Strengthening & dynamic stability exercises reduce risk</li>
-            <li>Education on proper landing and cutting techniques</li>
-          </ul>
-        </div>
-      </div>
-      <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
-        <button class="btn cta" onclick="printSection('acl')">Print PDF — ACL Awareness</button>
-      </div>
-    </section>
+<main id="app">
+<!-- HOME -->
+<section id="home" class="card" role="region" aria-labelledby="home-title">
+<h1 id="home-title">Home PAGE</h1>
+<p class="muted">ACL tears have become one of the most common and frustrating injuries for athletes and active people, yet most of us don’t realize how quickly they can happen or how long the recovery really is. One wrong landing, one quick change of direction, or even a simple misstep can lead to months of pain, rehab, and setbacks. Raising awareness matters because so many ACL injuries are avoidable with proper strength, technique, and understanding of how the knee actually works. The more people recognize the risks, the early warning signs, and the importance of taking care of their bodies, the fewer athletes will find themselves unexpectedly sidelined. ACL awareness isn’t about scaring anyone it’s about helping people stay confident, healthy, and capable of doing what they love without losing seasons or confidence to an injury they never saw coming.</p>
+</section>
+
+
+<!-- ACL Awareness -->
+<section id="acl" class="card" role="region" aria-labelledby="acl-title" style="display:none">
+<h1 id="acl-title">ACL Tear Awareness</h1>
+<p class="muted">What is the Anterior Cruciate Ligament (ACL)?</p>
+<p class="muted">The anterior cruciate ligament, or ACL, is one of the four main ligaments in the knee. Think of it as a strong, rope-like band of tissue that connects bones and stabilizes the joint. While the collateral ligaments on the sides of the knee (the medial collateral ligament on the inside and the lateral collateral ligament on the outside) keep the knee stable during sideways movements, the cruciate ligaments in the center provide stability during forward and backward motion. The ACL prevents the tibia (shinbone) from sliding forward, allowing you to pivot, twist, and jump safely. Its counterpart, the posterior cruciate ligament (PCL), keeps the tibia from moving backward relative to the femur (thighbone).</p>
+<p class="muted">What is an ACL Injury?</p>
+<p class="muted">The ACL plays a key role in keeping the knee stable during activity. When this ligament is injured, it can range from a mild sprain to a complete tear. ACL injuries often lead to pain, swelling, and a feeling of instability in the knee.</p>
+<p class="muted">Types of ACL Injuries</p>
+<ul class="muted">
+<li>Grade 1: Mild stretching of the ligament. The ACL remains intact and the knee is still stable.</li>
+<li>Grade 2: Partial tear of the ACL. This is less common and may cause some instability.</li>
+<li>Grade 3: Complete tear. The ACL is split into two pieces and can no longer stabilize the knee.</li>
+</ul>
+<p class="muted">What Causes an ACL Injury?</p>
+<p class="muted">ACL injuries usually happen during sports or physical activity, especially when sudden movements put stress on the ligament. Common causes include:</p>
+<ul class="muted">
+<li>Quick changes in direction</li>
+<li>Sudden stops</li>
+<li>Incorrectly landing from jumps</li>
+<li>Collisions or direct impacts to the knee</li>
+</ul>
+<p class="muted">How Does an ACL Tear Happen?</p>
+</section>
 
     <!-- Warmup & Workout -->
     <section id="warmup" class="card" role="region" aria-labelledby="warm-title" style="display:none">
