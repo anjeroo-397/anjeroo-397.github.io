@@ -54,7 +54,7 @@ select,input,textarea{background:transparent;border:1px solid rgba(255,255,255,0
 <a data-target="acl">ACL Awareness</a>
 <a data-target="warmup">Warmup & Workout</a>
 <a data-target="pain">Pain Advisor</a>
-<a data-target="resources">Resources</a>
+<a data-target="resources">Interactive ACL Guide</a>
 </nav>
 </header>
 
@@ -90,7 +90,7 @@ select,input,textarea{background:transparent;border:1px solid rgba(255,255,255,0
 </ul>
 
 <p class="muted">How Does an ACL Tear Happen?</p>
-<li>A torn ACL often occurs when the foot is planted on the ground while the body twists in the opposite direction. This sudden movement puts extreme stress on the ligament, causing it to tear. Sports like basketball, soccer, and football commonly see these injuries, especially during abrupt stops, pivots, or jumps. </li>
+<p>A torn ACL often occurs when the foot is planted on the ground while the body twists in the opposite direction. This sudden movement puts extreme stress on the ligament, causing it to tear. Sports like basketball, soccer, and football commonly see these injuries, especially during abrupt stops, pivots, or jumps. </p>
 <ul class="muted">
 <p class="muted"> Symptoms of an ACL Injury </p>
 <li>Most people feel the moment an ACL injury happens. Typical signs include:</li>
@@ -142,7 +142,7 @@ select,input,textarea{background:transparent;border:1px solid rgba(255,255,255,0
 
     <!-- Pain Advisor -->
     <section id="pain" class="card" role="region" aria-labelledby="pain-title" style="display:none">
-      <h1 id="pain-title">Pain Advisor</h1>
+      <h1 id="pain-title"></h1>
       <p class="muted">Select a symptom to get targeted exercise suggestions and precautions to help prevent ACL injury.</p>
       <div class="card">
         <form id="painForm" onsubmit="return false;">
@@ -167,6 +167,10 @@ select,input,textarea{background:transparent;border:1px solid rgba(255,255,255,0
         </form>
         <div style="margin-top:12px" class="card" id="adviceBox"></div>
       </div>
+    </section>
+    
+    <section id="interactive" class="card" role="region" aria-labelledby="pain-title" style="display:none">>
+        
     </section>
   </main>
 
